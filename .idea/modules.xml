@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ext_storage.iml" filepath="$PROJECT_DIR$/ext_storage.iml" group="ext_storage" />
+      <module fileurl="file://$PROJECT_DIR$/ext_storage.iml" filepath="$PROJECT_DIR$/ext_storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/extstorage_android.iml" filepath="$PROJECT_DIR$/android/extstorage_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/extstorage_example_android.iml" filepath="$PROJECT_DIR$/example/android/extstorage_example_android.iml" />
     </modules>
   </component>
 </project>

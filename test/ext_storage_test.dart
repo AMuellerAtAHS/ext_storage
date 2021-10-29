@@ -5,6 +5,8 @@ import 'package:ext_storage/ext_storage.dart';
 void main() {
   const MethodChannel channel = MethodChannel('ext_storage');
 
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
       return '42';
@@ -15,6 +17,5 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getExternalStorageDirectory', () async {
-  });
+  test('getExternalStorageDirectory', () async {});
 }

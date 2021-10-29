@@ -1,21 +1,21 @@
 # ext_storage
 
-ext_storage is minimal flutter plugin that provides external storage path and external public storage path.
+This project is forked from https://github.com/yasukotelin/ext_storage, cause the author didn't update since 2020.
 
-https://pub.dev/packages/ext_storage
+ext_storage is minimal flutter plugin that provides external storage path and external public storage path.
 
 ## Features
 
-> **NOTE** This plugin is only supported Android.
+> **NOTE** This plugin only supports Android.
 
-ExtStorage package calls Android native code, `Environment.getExternalStorageDirectory()` and `Environment.getExternalStoragePublicDirectory()`.
+ext_storage package calls Android native code, `Environment.getExternalStorageDirectory()` and `Environment.getExternalStoragePublicDirectory()`.
 
-| ExtStorage                                     | Andorid Native                                  |
+| ext_storage                                     | Andorid Native                                  |
 |------------------------------------------------|-------------------------------------------------|
-| ExtStorage.getExternalStorageDirectory()       | Environment.getExternalStorageDirectory()       |
-| ExtStorage.getExternalStoragePublicDirectory() | Environment.getExternalStoragePublicDirectory() |
+| ext_storage.getExternalStorageDirectory()       | Environment.getExternalStorageDirectory()       |
+| ext_storage.getExternalStoragePublicDirectory() | Environment.getExternalStoragePublicDirectory() |
 
-`ExtStorage.getExternalStoragePublicDirectory()` needs Public Directory Type argument same as native `getExternalStoragePublicDirectory()`.
+`ext_storage.getExternalStoragePublicDirectory()` needs Public Directory Type argument same as native `Environment.getExternalStoragePublicDirectory()`.
 
 | ExtStorage                         | Android Native                      |
 |------------------------------------|-------------------------------------|
@@ -34,11 +34,11 @@ ExtStorage package calls Android native code, `Environment.getExternalStorageDir
 
 ## Installation
 
-Add `ext_storage` as a dipendency in your project `pubspeck.yaml`.
+Add `ext_storage` as a dependency in your project `pubspec.yaml`.
 
 ```yaml
 dependencies:
-  ext_storage:
+  ext_storage: ^2.0.0 # !!! replace with actual package version
 ```
 
 and run the `flutter pub get` to install.
@@ -51,7 +51,7 @@ First, you write import `ext_storage` package.
 import 'package:ext_storage/ext_storage.dart';
 ```
 
-And you can call two functions.
+And then you can call two functions.
 
 ```dart
 void _example1() async {
@@ -60,14 +60,18 @@ void _example1() async {
 }
 
 void _example2() async {
-  var path = await ExtStorage.getExternalStoragePublicDirectory(ExtStorage.DIRECTORY_PICTURES);
-  print(path);  // /storage/emulated/0/Pictures
+  var path = await ExtStorage.getExternalStoragePublicDirectory(ExtStorage.DIRECTORY_DOWNLOADS);
+  print(path);  // /storage/emulated/0/Downloads
 }
 ```
 
 ## Author
 
-yasukotelin
+AMuellerAtAHS
+
+## Fork
+
+Fork of: https://github.com/yasukotelin/ext_storage
 
 ## LICENCE
 
