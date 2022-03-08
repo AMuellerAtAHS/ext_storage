@@ -38,7 +38,8 @@ Add `ext_storage` as a dependency in your project `pubspec.yaml`.
 
 ```yaml
 dependencies:
-  ext_storage: ^2.0.0 # !!! replace with actual package version
+  ext_storage: #^2.0.0 # !!! replace with actual package version
+    git: https://github.com/AMuellerAtAHS/ext_storage.git
 ```
 
 and run the `flutter pub get` to install.
